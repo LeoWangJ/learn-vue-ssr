@@ -21,6 +21,7 @@ server.get('*', (req, res) => {
 
     renderer
     .renderToString(app,context).then(html=>{
+        console.log(html)
         res.end(html);
     }).catch(err=>{
         console.log(err)
