@@ -1,4 +1,4 @@
-const createApp = require('./app')
+const createApp = require('./src/app')
 
 const server = require('express')();
 
