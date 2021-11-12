@@ -1,31 +1,36 @@
 {
   "name": "learn-vue-ssr",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "build:client": "vue-cli-service build",
+    "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build --mode server",
+    "build": "npm run build:server && npm run build:client",
+    "dev": "nodemon server/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeoWangJ/learn-vue-ssr.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LeoWangJ/learn-vue-ssr/issues"
-  },
-  "homepage": "https://github.com/LeoWangJ/learn-vue-ssr#readme",
   "dependencies": {
+    "core-js": "^3.6.5",
     "express": "^4.17.1",
-    "vue": "^2.6.14",
+    "lodash.merge": "^4.6.2",
+    "vue": "^2.6.11",
     "vue-router": "^3.5.3",
     "vue-server-renderer": "^2.6.14",
-    "vuex": "^3.6.2",
-    "vuex-router-sync": "^5.0.0"
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "nodemon": "^2.0.15",
+    "vue-template-compiler": "^2.6.11"
   }
 }
