@@ -1,24 +1,19 @@
 # learn-vue-ssr
+學習 Vue SSR 實作的原理
 
-## Project setup
+## 安裝
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 開發
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
